@@ -1,0 +1,835 @@
+/* =========================================================
+   SHREE EVENTS - NAVBAR
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 40px;
+
+  background: linear-gradient(
+    135deg,
+    #111827 0%,
+    #1f2937 45%,
+    #0f172a 100%
+  );
+
+  color: #ffffff;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 11px 40px;
+
+  background: rgba(15, 23, 42, 0.95);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: translateY(-1px);
+}
+
+
+/* Logo */
+
+.brand-logo {
+  width: 65px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  transition: all 0.3s ease;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+
+/* SHREE */
+
+.brand-text1 {
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+
+/* Events */
+
+.brand-text2 {
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  letter-spacing: 0.5px;
+
+  transition: color 0.3s ease;
+}
+
+.brand:hover .brand-text1 {
+  color: #f54927;
+}
+
+.brand:hover .brand-text2 {
+  color: #fbbf24;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.nav-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  padding: 8px 2px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+  color: #f54927;
+
+  transform: translateY(-1px);
+}
+
+
+/* Underline */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #fbbf24,
+    #fb7185
+  );
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+/* Active */
+
+.nav-links a.active {
+  color: #f54927;
+}
+
+
+/* =========================================================
+   PROFILE MENU
+========================================================= */
+
+.profile-menu {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  margin-left: 4px;
+
+  /* Important:
+     keeps the hover area connected to dropdown */
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+}
+
+
+/* =========================================================
+   PROFILE BUTTON
+========================================================= */
+
+.profile-btn {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.profile-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+
+  border-color: rgba(255, 255, 255, 0.25);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   NAVBAR AVATAR
+========================================================= */
+
+.nav-avatar-large {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #f54927,
+    #ea580c
+  );
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 5px 15px rgba(245, 73, 39, 0.3);
+
+  user-select: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.profile-btn:hover .nav-avatar-large {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 7px 20px rgba(245, 73, 39, 0.45);
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+========================================================= */
+
+.profile-dropdown {
+  position: absolute;
+
+  top: calc(100% + 2px);
+  right: 0;
+
+  width: 190px;
+
+  padding: 7px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  animation: profileDropdown 0.2s ease;
+
+  z-index: 1100;
+}
+
+@keyframes profileDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Dropdown links + buttons */
+
+.profile-dropdown a,
+.profile-dropdown button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 12px 13px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+
+/* Icons */
+
+.profile-dropdown svg {
+  font-size: 17px;
+}
+
+
+/* Hover */
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background: #f3f4f6;
+
+  color: #f54927;
+
+  padding-left: 17px;
+}
+
+
+/* Logout */
+
+.profile-dropdown button {
+  color: #374151;
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.15);
+
+  transform: scale(1.04);
+}
+
+.hamburger.open {
+  background: rgba(245, 73, 39, 0.2);
+
+  color: #f54927;
+}
+
+
+/* =========================================================
+   MOBILE DRAWER OVERLAY
+========================================================= */
+
+.drawer-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  animation: overlayFade 0.2s ease;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE DRAWER
+========================================================= */
+
+.mobile-drawer {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 320px;
+  max-width: 90%;
+
+  height: 100%;
+
+  padding: 28px 22px;
+
+  overflow-y: auto;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 24, 39, 0.98),
+      rgba(15, 23, 42, 0.98)
+    );
+
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    -15px 0 40px rgba(0, 0, 0, 0.25);
+
+  animation: drawerSlide 0.3s ease;
+}
+
+@keyframes drawerSlide {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE PROFILE
+========================================================= */
+
+.drawer-profile {
+  text-align: center;
+
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.09);
+}
+
+.drawer-profile .profile-avatar.large {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 13px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #f54927,
+    #ea580c
+  );
+
+  color: white;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  border: 3px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 8px 20px rgba(245, 73, 39, 0.3);
+}
+
+.drawer-profile h3 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.drawer-profile p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 13px;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   MOBILE LINKS
+========================================================= */
+
+.drawer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.drawer-links a,
+.drawer-links button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.drawer-links a:hover,
+.drawer-links button:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #fbbf24;
+
+  transform: translateX(3px);
+}
+
+.drawer-links svg {
+  font-size: 17px;
+}
+
+
+/* Active mobile link */
+
+.drawer-links a.active {
+  background: rgba(245, 73, 39, 0.13);
+
+  color: #f54927;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 14px 25px;
+  }
+
+  .navbar.scrolled {
+    padding: 11px 25px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .brand-text1 {
+    font-size: 24px;
+  }
+
+  .brand-text2 {
+    font-size: 22px;
+  }
+
+  .brand-logo {
+    width: 58px;
+    height: 38px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .navbar.scrolled {
+    padding: 10px 18px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .brand-logo {
+    width: 55px;
+    height: 36px;
+  }
+
+  .brand-text1 {
+    font-size: 22px;
+  }
+
+  .brand-text2 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .navbar.scrolled {
+    padding: 9px 14px;
+  }
+
+  .brand {
+    gap: 3px;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 34px;
+  }
+
+  .brand-text1 {
+    font-size: 19px;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-text2 {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mobile-drawer {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 25px 20px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .brand-logo {
+    width: 42px;
+  }
+
+  .brand-text1 {
+    font-size: 17px;
+  }
+
+  .brand-text2 {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+}
